@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div>
+  <div class="page-header">
+    <h1>{{ .Title }}</h1>
+  </div>
+  {{ range where .Site.RegularPages "Type" "posts" }}
+  <div class="home-page-article">
+    <h2><a class="home-page-article__link" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>{{ .Summary }}</p>
+    <span class="home-page-article__date">
+      {{ with .Params.writer }}
+        Written by {{ . }} on 
+      {{else}}
+        -
+      {{ end }}
+      {{ .Params.date.Format "Mon Jan 2, 2006" }}
+    </span>
+  </div>
+
+  {{end}}
+</div>
+{{ end }}
