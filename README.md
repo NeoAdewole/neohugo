@@ -1,3 +1,5 @@
-![image](assets/img/avatar.png)
-# Neo Hugo
+![image](assets/img/neovatar.png)
+
+# Hugo Theme Neo
+
 Basic theme starter for Hugo
